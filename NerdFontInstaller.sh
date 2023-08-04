@@ -141,7 +141,7 @@ done
 
 
 _install(){
-sudo mkdir "$DIR" 
+sudo mkdir -p "$DIR"
 wget -q --show-progress "$URL" -O "$TEMP"
 sudo unzip "$TEMP" -d "$DIR"
 sudo rm -rf "$TEMP"
