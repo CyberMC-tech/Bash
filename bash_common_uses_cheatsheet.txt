@@ -1,0 +1,9 @@
+1. echo : Used to print data to the terminal.
+2. read : Used to read input from the user.
+3. if..else : Used for conditional statements.
+4. for : Used for looping over a sequence of numbers or array elements.
+5. while : Used for looping as long as a condition is true.
+6. case : Used for pattern matching and choice selection.
+7. function : Used to define a block of code that can be reused.
+8. exit : Used to end the script with a status.
+9. trap : Used to respond to signals and system events.

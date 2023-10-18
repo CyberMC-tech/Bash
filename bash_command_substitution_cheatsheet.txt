@@ -1,0 +1,4 @@
+1. $(command) : This is the preferred method for command substitution in bash. It allows for nesting.
+   Example: echo "Today is $(date)" - This will print "Today is " followed by the current date.
+2. `command` : This is the old method for command substitution. It can be difficult to use with complex or nested commands.
+   Example: echo "Today is `date`" - This will also print "Today is " followed by the current date.

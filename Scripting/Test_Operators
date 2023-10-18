@@ -1,0 +1,96 @@
+!/bin/bash
+
+cat << EOF
+
+ Numeric Comparison Operators
+--------------------------------
+Operator        Description
+--------------------------------
+-eq             Equal to
+- e             Not equal to
+-lt             Less than
+-le             Less than or equal to
+-gt             Greater than
+-ge             Greater than or equal to
+
+
+
+ String Comparison Operators
+-------------------------------
+Operator        Description
+-------------------------------
+=               Equal to (within double brackets)
+==              Equal to (within double brackets)
+!=              Not equal to (within double brackets)
+<               Less than (within double brackets)
+>               Greater than (within double brackets)
+-n              Non-empty string
+-z              Empty string
+
+
+
+  File Test Operators
+----------------------------------------
+Operator        Description
+----------------------------------------
+-e              File exists
+-f              Regular file
+-d              Directory
+-s              File is not empty
+-r              Readable
+-w              Writable
+-x              Executable
+
+
+  Logical Operators
+----------------------------------------
+Operator        Description
+----------------------------------------
+!               Logical NOT
+&&              Logical AND
+||              Logical OR
+
+
+ Miscellaneous Operators
+----------------------------------------
+Operator        Description
+----------------------------------------
+=~              Regex match (within double brackets)
+
+
+  Other Test Operators
+----------------------------------------
+Operator        Description
+----------------------------------------
+-o              Option is set (used with 'set' command)
+-s              File has a size greater than 0
+
+
+ Examples
+----------------------------------------
+
+if [ $a -eq $b ]; then
+     Code to execute if $a is equal to $b
+fi
+
+
+if [[ $string1 == $string2 ]]; then
+     Code to execute if $string1 is equal to $string2
+fi
+
+
+if [ -e $file ]; then
+     Code to execute if $file exists
+fi
+
+
+if [[ $var =~ ^[0-9]+$ ]]; then
+     Code to execute if $var contains only digits
+fi
+
+
+if [ ! -d $directory ]; then
+     Code to execute if $directory is not a directory
+fi
+
+EOF

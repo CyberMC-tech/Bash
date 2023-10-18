@@ -1,0 +1,41 @@
+# Basic if statement structure:
+if [ condition ]; then
+    # Commands to execute if the condition is true
+fi
+
+# Common test flags for string comparisons:
+[ -z "$string" ]         # True if the string is empty
+[ -n "$string" ]         # True if the string is not empty
+[ "$string1" = "$string2" ]   # True if the strings are equal
+[ "$string1" != "$string2" ]  # True if the strings are not equal
+
+# Common test flags for file attributes:
+[ -e "$file" ]           # True if the file exists
+[ -f "$file" ]           # True if the file exists and is a regular file
+[ -d "$dir" ]            # True if the directory exists
+[ -r "$file" ]           # True if the file is readable
+[ -w "$file" ]           # True if the file is writable
+[ -x "$file" ]           # True if the file is executable
+
+# Numeric comparisons:
+[ "$num1" -eq "$num2" ]  # True if num1 is equal to num2
+[ "$num1" -ne "$num2" ]  # True if num1 is not equal to num2
+[ "$num1" -lt "$num2" ]  # True if num1 is less than num2
+[ "$num1" -le "$num2" ]  # True if num1 is less than or equal to num2
+[ "$num1" -gt "$num2" ]  # True if num1 is greater than num2
+[ "$num1" -ge "$num2" ]  # True if num1 is greater than or equal to num2
+
+# Logical operators:
+[ condition1 ] && [ condition2 ]   # True if both conditions are true
+[ condition1 ] || [ condition2 ]   # True if either condition1 or condition2 is true
+! [ condition ]                     # True if the condition is false
+
+# Combining multiple conditions:
+if [ condition1 ] && [ condition2 ]; then
+    # Commands to execute if both conditions are true
+elif [ condition3 ] || [ condition4 ]; then
+    # Commands to execute if either condition3 or condition4 is true
+else
+    # Commands to execute if none of the conditions are true
+fi
+

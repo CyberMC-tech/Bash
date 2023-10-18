@@ -1,0 +1,5 @@
+1. :- : Provide a default value for a variable. If the variable is unset or null, the expansion of word is substituted instead.
+2. :+ : The opposite of :- . If the variable is set, it will return the value of word, otherwise it returns nothing.
+3. := : Similar to :- but it also assigns the word to the variable if the variable was unset or null.
+4. :? : Display an error message if the variable is unset or null.
+5. : : Expand the variable and return its value. If the variable is unset or null, it returns null.

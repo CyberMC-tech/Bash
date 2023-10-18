@@ -1,0 +1,20 @@
+1. String length: ${#string}
+   Example: string="Hello, World!"; echo ${#string} - Outputs 13
+2. Substring: ${string:position:length}
+   Example: string="Hello, World!"; echo ${string:7:5} - Outputs World
+3. Replace first match: ${string/pattern/replacement}
+   Example: string="Hello, World!"; echo ${string/o/a} - Outputs Hella, World!
+4. Replace all matches: ${string//pattern/replacement}
+   Example: string="Hello, World!"; echo ${string//o/a} - Outputs Hella, Warld!
+5. Replace beginning: ${string/#pattern/replacement}
+   Example: string="Hello, World!"; echo ${string/#Hello/Hi} - Outputs Hi, World!
+6. Replace end: ${string/%pattern/replacement}
+   Example: string="Hello, World!"; echo ${string/%World/Everyone} - Outputs Hello, Everyone!
+7. Remove shortest match from beginning: ${string#pattern}
+   Example: string="Hello, World!"; echo ${string#*,} - Outputs  World!
+8. Remove longest match from beginning: ${string##pattern}
+   Example: string="Hello, World!"; echo ${string##*,} - Outputs  World!
+9. Remove shortest match from end: ${string%pattern}
+   Example: string="Hello, World!"; echo ${string%World*} - Outputs Hello, 
+10. Remove longest match from end: ${string%%pattern}
+    Example: string="Hello, World!"; echo ${string%%,*} - Outputs Hello

@@ -1,0 +1,14 @@
+1. command > file: Redirects the standard output from command to file. Overwrites file.
+   Example: echo "Hello, World!" > output.txt - Writes "Hello, World!" to output.txt.
+2. command >> file: Redirects the standard output from command to file. Appends to file.
+   Example: echo "Hello, again!" >> output.txt - Appends "Hello, again!" to output.txt.
+3. command 2> file: Redirects the standard error from command to file. Overwrites file.
+   Example: ls /nonexistent 2> error.txt - Redirects error message to error.txt.
+4. command 2>> file: Redirects the standard error from command to file. Appends to file.
+   Example: ls /nonexistent 2>> error.txt - Appends error message to error.txt.
+5. command &> file: Redirects both the standard output and the standard error from command to file. Overwrites file.
+   Example: ls /nonexistent &> output_and_error.txt - Redirects both output and error to output_and_error.txt.
+6. command < file: Takes file as input to command.
+   Example: sort < unsorted.txt - Sorts the contents of unsorted.txt.
+7. command1 | command2: Pipes the standard output of command1 to the standard input of command2.
+   Example: ls -l | grep ".txt" - Lists all .txt files in the current directory.
