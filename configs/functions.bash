@@ -6,30 +6,30 @@ gpt() {
     interpreter -y
 }
 
-_c_cd() {
-    cd "$@" || return "$?"
-
-    if [ "$_ZO_ECHO" = "1" ]; then
-        echo "$PWD"
-    fi
-}
-
-
-c() {
-    if [ "$#" -eq 0 ]; then
-        _c_cd ~
-    elif [ "$#" -eq 1 ] && [ "$1" = '-' ]; then
-        if [ -n "$OLDPWD" ]; then
-            _c_cd "$OLDPWD"
-        else
-            echo 'zoxide: $OLDPWD is not set'
-            return 1
-        fi
-    else
-        _query="$(zoxide query -- "$@")" && _c_cd "$_query" &&
-        lsd --group-directories-first --icon=always --color=always 
-    fi
-}
+# _c_cd() {
+#     cd "$@" || return "$?"
+#
+#     if [ "$_ZO_ECHO" = "1" ]; then
+#         echo "$PWD"
+#     fi
+# }
+#
+#
+# c() {
+#     if [ "$#" -eq 0 ]; then
+#         _c_cd ~
+#     elif [ "$#" -eq 1 ] && [ "$1" = '-' ]; then
+#         if [ -n "$OLDPWD" ]; then
+#             _c_cd "$OLDPWD"
+#         else
+#             echo 'zoxide: $OLDPWD is not set'
+#             return 1
+#         fi
+#     else
+#         _query="$(zoxide query -- "$@")" && _c_cd "$_query" &&
+#         lsd --group-directories-first --icon=always --color=always 
+#     fi
+# }
 
 
 new_note() {
@@ -156,5 +156,19 @@ bdaddy() {
   firefox https://www.pornhub.com/model/braydaddy33/videos &
 }
 
-# youtube() {
-# }
+youtube() {
+  local url="youtube.com/results?search_query="
+  local search_query=$(echo "$@" | sed "s/ /+/g")
+  firefox "${url}${search_query}" &
+}
+
+explain() {
+    firefox "http://explainshell.com/explain?cmd=$argv"
+}
+
+parufzf() {
+    paru -Sl chaotic-aur extra core blackarch garuda | awk "{print $2}" | fzf --reverse --preview="paru -Si {}"
+}
+
+
+
